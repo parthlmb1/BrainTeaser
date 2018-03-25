@@ -76,6 +76,8 @@ class GameVC: UIViewController {
             noBtn.isHidden = true
             yesBtn.setTitle("START", for: .normal)
             titleLbl?.text = "Click the start Button to begin."
+            correctAns = 0
+            wrongAns = 0
         }
     }
     
