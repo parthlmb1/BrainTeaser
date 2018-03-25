@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="BrainTeaser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,201 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OJB0ET0" translatesAutoresizingMaskIntoConstraints="NO" id="4wx-9p-zen">
+                                <rect key="frame" x="16" y="30" width="343" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="VNu-oT-wcc"/>
+                                    <constraint firstAttribute="height" constant="254" id="ZNU-h3-j0T"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4B-3S-i0A" customClass="CustomTextField" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="60" y="319" width="255" height="40"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="0qJ-71-yr4"/>
+                                    <constraint firstAttribute="height" constant="40" id="EEb-mr-fcF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-pu-HxO" customClass="CustomTextField" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="60" y="394" width="255" height="40"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="Kmj-wT-Wde"/>
+                                    <constraint firstAttribute="height" constant="40" id="jTT-m5-8KY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="l75-gh-bgX"/>
+                                    <constraint firstAttribute="width" constant="255" id="qLF-i9-8Fa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-jU-Hhd" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="129" y="469" width="116" height="41"/>
+                                <color key="backgroundColor" red="0.23972023212049126" green="0.92503588440320073" blue="0.24891252340957554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="UOc-Xe-Fbp"/>
+                                    <constraint firstAttribute="width" constant="116" id="Zre-db-eGX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="XBb-sF-Cse" kind="show" id="e9a-Pv-lLj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QfI-jU-Hhd" firstAttribute="top" secondItem="Es1-pu-HxO" secondAttribute="bottom" constant="35" id="5OP-ag-Ih7"/>
+                            <constraint firstItem="Es1-pu-HxO" firstAttribute="top" secondItem="t4B-3S-i0A" secondAttribute="bottom" constant="35" id="Gp9-xT-TOH"/>
+                            <constraint firstItem="4wx-9p-zen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N4N-fN-Lak"/>
+                            <constraint firstItem="QfI-jU-Hhd" firstAttribute="centerX" secondItem="Es1-pu-HxO" secondAttribute="centerX" id="bGg-d2-aum"/>
+                            <constraint firstItem="4wx-9p-zen" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="g46-MC-YHm"/>
+                            <constraint firstItem="Es1-pu-HxO" firstAttribute="centerX" secondItem="t4B-3S-i0A" secondAttribute="centerX" id="hsT-MG-PZ3"/>
+                            <constraint firstItem="t4B-3S-i0A" firstAttribute="top" secondItem="4wx-9p-zen" secondAttribute="bottom" constant="35" id="hvp-vM-Ea5"/>
+                            <constraint firstItem="t4B-3S-i0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tyl-Yt-ksP"/>
+                        </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="emailConstraint" destination="tyl-Yt-ksP" id="SAI-hv-3ws"/>
+                        <outlet property="loginConstraint" destination="bGg-d2-aum" id="6Cy-0A-Rk8"/>
+                        <outlet property="passwordConstraint" destination="hsT-MG-PZ3" id="LSS-T7-PNL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-82" y="36"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="cPj-mm-fBL">
+            <objects>
+                <viewController id="XBb-sF-Cse" customClass="GameVC" customModule="BrainTeaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ks7-lj-xml"/>
+                        <viewControllerLayoutGuide type="bottom" id="57m-dF-HUs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHm-qY-p2R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44E-OG-IdH" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="243" y="606" width="116" height="41"/>
+                                <color key="backgroundColor" red="0.23972023210000001" green="0.92503588439999995" blue="0.2489125234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="Pu6-NU-qjB"/>
+                                    <constraint firstAttribute="height" constant="41" id="lRW-S7-FSI"/>
+                                    <constraint firstAttribute="width" constant="116" id="vVe-Cx-ngD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="yesPressedWithSender:" destination="XBb-sF-Cse" eventType="touchUpInside" id="wNe-LF-eB3"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcV-8E-cmU" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="16" y="606" width="116" height="41"/>
+                                <color key="backgroundColor" red="0.23972023210000001" green="0.92503588439999995" blue="0.2489125234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Lpg-5O-phh"/>
+                                    <constraint firstAttribute="width" constant="116" id="Qdq-uD-GlL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="aFE-kX-saV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="NO">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="noPressedWithSender:" destination="XBb-sF-Cse" eventType="touchUpInside" id="sc6-4U-pKX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember this Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nx2-Ix-Wit">
+                                <rect key="frame" x="16" y="65" width="343" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="EnM-Sm-nbz"/>
+                                    <constraint firstAttribute="width" constant="343" id="WXC-pv-weh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJK-gT-c48">
+                                <rect key="frame" x="125" y="110" width="125" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="3se-1V-uoi"/>
+                                    <constraint firstAttribute="width" constant="125" id="bbA-mj-PFd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nx2-Ix-Wit" firstAttribute="centerX" secondItem="lHm-qY-p2R" secondAttribute="centerX" id="1ZO-BL-Bvd"/>
+                            <constraint firstItem="mJK-gT-c48" firstAttribute="top" secondItem="nx2-Ix-Wit" secondAttribute="bottom" constant="20" id="3ov-ae-8S8"/>
+                            <constraint firstItem="mJK-gT-c48" firstAttribute="centerX" secondItem="lHm-qY-p2R" secondAttribute="centerX" id="Lm4-hx-xWv"/>
+                            <constraint firstItem="nx2-Ix-Wit" firstAttribute="leading" secondItem="LcV-8E-cmU" secondAttribute="leading" id="QaD-GU-3St"/>
+                            <constraint firstItem="nx2-Ix-Wit" firstAttribute="top" secondItem="ks7-lj-xml" secondAttribute="bottom" constant="45" id="V2U-ex-3bL"/>
+                            <constraint firstItem="LcV-8E-cmU" firstAttribute="leading" secondItem="lHm-qY-p2R" secondAttribute="leadingMargin" id="WTX-SH-jUA"/>
+                            <constraint firstItem="57m-dF-HUs" firstAttribute="top" secondItem="44E-OG-IdH" secondAttribute="bottom" constant="20" id="lsp-SY-mhP"/>
+                            <constraint firstItem="44E-OG-IdH" firstAttribute="trailing" secondItem="lHm-qY-p2R" secondAttribute="trailingMargin" id="mMx-MW-Uqd"/>
+                            <constraint firstItem="57m-dF-HUs" firstAttribute="top" secondItem="LcV-8E-cmU" secondAttribute="bottom" constant="20" id="x91-9P-sQd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noBtn" destination="LcV-8E-cmU" id="HQM-qI-V0R"/>
+                        <outlet property="timerLbl" destination="mJK-gT-c48" id="2by-qq-qQS"/>
+                        <outlet property="titleLbl" destination="nx2-Ix-Wit" id="Ee2-Px-fsF"/>
+                        <outlet property="yesBtn" destination="44E-OG-IdH" id="9iK-QP-b4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1K-Op-SNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.60000000000002" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="OJB0ET0" width="1300" height="1300"/>
+    </resources>
 </document>
